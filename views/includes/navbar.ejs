@@ -1,0 +1,141 @@
+<style>
+    .btn-search {
+        background-color: #fe424d;
+        color: #fff;
+        border-radius: 25px;
+        padding: 0 1rem 0 1rem;
+    }
+
+    .btn-search:hover {
+        background-color: #fe424d;
+        color: #fff;
+    }
+
+    .btn-search i {
+        display: inline;
+        margin-right: 0.5rem;
+    }
+
+    .search-inp {
+        margin-left: 20rem;
+        border-radius: 25px;
+        padding: 0.5rem 3rem 0.5rem 3rem;
+        font-size: 0.9rem;
+    }
+
+    /*--------------- Responsive Design -----------*/
+    @media screen and (max-width: 1272px) {
+
+        .search-inp {
+            margin-left: 6rem;
+            padding: 0.5rem 5rem 0.5rem 2rem;
+            font-size: 0.8rem;
+        }
+        .btn-search {
+            padding: 0 1rem 0 1rem;
+        }
+
+    }
+
+    @media screen and (max-width: 992px) {
+
+        .nav-link {
+            font-size: 0.9rem;
+        }
+        #title {
+            display: none;
+        }
+
+        .search-inp {
+            margin-left: 6rem;
+            padding: 0.5rem 2rem 0.5rem 2rem;
+            font-size: 0.8rem;
+        }
+        .btn-search {
+            padding: 0 1rem 0 1rem;
+            font-size: 0.8rem;
+        }
+        
+    }
+
+    @media screen and (max-width: 767px) {
+        .search-inp {
+            margin-left: 1rem;
+            padding: 0.5rem 5rem 0.5rem 2rem;
+            font-size: 0.8rem;
+        }
+        .btn-search {
+            margin-right: 6rem;
+            padding: 0 1.5rem 0 1.5rem;
+        }
+
+        .menu {
+            padding: 1rem 0 1rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ebebee;
+        }
+    }
+
+    @media (max-width: 627px) {
+        .search-inp {
+            padding: 0.5rem 2rem 0.5rem 2rem;
+            font-size: 0.8rem;
+        }
+        .btn-search {
+            margin-right: 3rem;
+            padding: 0 1.5rem 0 1.5rem;
+        }
+
+        .menu {
+            padding: 1rem 0 1rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ebebee;
+        }
+    }
+</style>
+
+
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+    <div class="container-fluid">
+
+        <!-- Compass Icon -->
+        <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+
+        <div class="navbar-nav">
+            <a class="nav-link" id="title" href="/listings"><b>WanderLust</b></a>
+        </div>
+
+        <!-- Search -->
+        <div class="navbar-nav ms-auto">
+            <form class="d-flex needs-validation" role="search" action="/listings/search"
+            method="get" id="searchBox">
+                <input class="form-control me-2 search-inp" type="search" placeholder="Search destinations" aria-label="Search" name="q" id="mySearchInput">
+                <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+            </form>
+        </div>
+
+        <!-- Navbar toggler for Mobile View -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapse Button for Mobile View -->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+            <div class="navbar-nav ms-auto menu">
+                <a class="nav-link" href="/listings/new">Add your home</a>
+                <% if (!currUser) { %>
+                    <a class="nav-link" href="/signup"><i class="fas fa-user"></i>&nbsp;<b>Sign up</b></a>
+                    <a class="nav-link" href="/login"><i class="fas fa-sign-in-alt"></i>&nbsp;<b>Log in</b></a>
+                <% } %>
+                <% if (currUser) { %>
+                    <a class="nav-link" href="/logout"><i class="fas fa-sign-in-alt"></i>&nbsp;<b>Logout</b></a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</nav>

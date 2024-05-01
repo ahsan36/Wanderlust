@@ -1,0 +1,295 @@
+body {
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+/*------------------ Navbar ---------------*/
+.navbar {
+    height: 4.5rem;
+    background-color: #ebebee;
+}
+
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222222 !important;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: #fe424d !important;
+}
+
+#title {
+    color: #fe424d !important;
+    font-size: 1.4rem;
+}
+
+/*------------------ Footer --------------*/
+.f-info-links {
+    gap: 10px;
+}
+
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info-links, .f-info-social, .f-info-brand  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-info-social i{
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.f-info {
+    text-align: center;
+    height: 8rem;
+    display: flex;
+    background-color: #ebebeb;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer {
+    background-color: #ebebee;
+}
+  
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* background-color: burlywood; */
+    text-decoration: none;
+    max-width: 100vw;
+    margin: auto;
+    padding: 40px 80px;
+}
+  
+.scrollup {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    padding-right: 50px;
+    margin-top: 20px;
+}
+  
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 15px;
+}
+  
+.footer-item a {
+    text-decoration: none;
+    color: #151515;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+  
+.footer-item a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.lang-inr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 150px;
+}
+  
+.lang-inr img {
+    width: 30px;
+    border: none;
+    margin-top: -6px;
+}
+
+.f-title {
+    color: #fe424d !important;
+    font-size: 1.4rem !important;
+}
+
+/*----------------- Card ---------------*/
+img {
+    border: 3px solid #d0d0d3;
+    border-style: groove;
+}
+
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body {
+    padding: 0 !important;
+    margin-left: 10px;
+}
+
+.card-text {
+    font-weight: 500 !important;
+    color: #222222;
+    font-size: 17px;
+    font-family: "Lato", sans-serif;
+}
+
+.listing-link {
+    text-decoration: none;
+}
+
+/*----------- Card Effect ----------*/
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+#comments textarea {
+    width: 650px !important;
+}
+
+/*---------------------- New Page ------------------*/
+.add-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+    width: 80px !important;
+}
+
+.add-btn:hover {
+    background-color: #ee3c45 !important;
+}
+
+/*--------------------- Edit Page ---------------*/
+.edit-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+    width: 80px !important;
+}
+
+.edit-btn:hover {
+    background-color: #ee3c45 !important;
+}
+
+/*------------------ Show Page ---------------*/
+.show-img {
+    height: 60vh;
+    width: 800px !important;
+}
+
+.btns {
+    display: flex;
+}
+
+.show-card {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#show-body {
+    margin-top: -6rem !important;
+}
+
+#lis-tit {
+    margin-top: 130px;
+    margin-bottom: 38px;
+    height: 10%;
+    box-sizing: border-box;
+    width: 70%;
+    text-align: center;
+}
+
+/*----------------- Review -------------------*/
+.row .allreview {
+    margin-top: 40px;
+    font-size: 22px;
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+textarea {
+    height: 180px;
+}
+  
+#rating {
+    color: black;
+    font-weight: 550;
+}
+
+/*----------------------- Map --------------------*/
+#map {
+    height: 460px;
+    /* width: 100vh; */
+    border: 2px solid #d0d0d3;
+    border-style: ridge;
+}
+
+
+  /*--------------------- Footer Responsive -----------------*/
+@media (max-width: 767px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 30px;
+    /* gap: 36px; */
+  }
+
+  .footer-item hr {
+    width: 100%;
+  }
+
+  #log {
+    width: 340px !important;
+    margin-left: auto;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  #create {
+    width: 160% !important;
+    margin-right: auto;
+    font-weight: 700;
+  }
+
+  #custom {
+    width: 260px !important;
+    margin-left: -40px;
+  }
+  .lang-inr {
+    display: none;
+  }
+  #tonone {
+    display: none;
+  }
+  #third-fr {
+    margin-top: 26px;
+  }
+}

@@ -1,0 +1,66 @@
+<% layout("/layouts/boilerplate") %>
+
+<style>
+    @media (max-width: 992px) {
+        .signup-text {
+            font-size: 1.4rem;
+        }
+
+        #account {
+            font-size: 0.9rem;
+        }
+    }
+</style>
+
+<div class="row mt-3">
+    <div class="col-6 offset-3">
+        <h1 class="signup-text" style="color: #fe424d;">SignUp on Wanderlust</h1>
+
+        <!-------- Sign Up Form ------->
+        <form action="/signup" method="POST" class="needs-validation" novalidate>
+
+            <!-- username -->
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input 
+                name="username"
+                id="username" 
+                type="text"
+                class="form-control"
+                required 
+                />
+                <div class="valid-feedback ">Looks good!</div>
+            </div>
+
+            <!-- email -->
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input 
+                name="email"
+                id="email" 
+                type="email"
+                class="form-control"
+                required 
+                />
+            </div>
+
+            <!-- password -->
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input 
+                name="password"
+                id="password" 
+                type="password"
+                class="form-control"
+                required 
+                />
+            </div>
+
+            <button class="btn btn-success">SignUp</button>
+        </form>
+
+        <div style="margin-top: 10px" id="account">
+            <p>Already have an account?&nbsp;<a href="/login">Login in</a></p>
+        </div>
+    </div>
+</div>
