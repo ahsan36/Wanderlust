@@ -19,7 +19,7 @@ I have deployed my project using render connected with MongoDB Atlas.
 
 # Tech Stack
 
-Frontend: HTML, CSS, Javascript, Bootstrap
-Backend: Node.js, Express.js, EJS
-Database: MongoDB
+Frontend: HTML, CSS, Javascript, Bootstrap <br>
+Backend: Node.js, Express.js, EJS <br>
+Database: MongoDB <br>
 Other: Cloudaniry, Passport.js, Mongo Atlas 
